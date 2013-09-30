@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Unpind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto|Oxygen' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+     <!-- TokBox Start -->
+    <script src='https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js'></script>
+    <!-- TokBox End -->
+   
+    <!-- Datepicker css and jquery -->
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+    <script type="text/javascript" src="bootstrap-fulldatepicker.js"></script>
+    <script>
+$(document).on('focus', '.fulldatepicker', function (e) {
+    $(this).datepicker({
+      format: 'dd/mm/yy'
+    });
+  });
+
+  $(document).on('focus', '.yearpicker', function (e) {
+    $(this).datepicker({
+      format: 'yyyy',
+      startDate: '01.01.2012',
+      viewMode: 'years',
+      minViewMode: 'years'
+    });
+  });
+</script>
+
+    <style type="text/css"> 
+
+      /* datepicker styling */
+      .dropdown-menu{
+/* used for styling this example */
+max-width: 224px;
+}
+input{
+/* used for styling this example */
+height:auto !important;
+} 
+ 
+#datepicker-extra
+{
+/* dateicker custom title style */
+background: #CEE1F7;
+padding: 5px 0px 4px;
+cursor:pointer;
+}
+.datepickering{
+/* dateicker custom title style */
+color: #0070FF;
+cursor: pointer;
+font-size: 13px;
+}
+
+
+      /* Large desktop */
+      @media (min-width: 980px) {
+        body {
+          padding-top: 60px;
+      }n
+        .linediv-l {
+          border-bottom: 1px white solid;
+      }
+        .linediv-r {
+          border-top: 1px white solid;
+      }
+     } 
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) {
+        .copy {
+          padding: 2.5% 10%;
+      }
+        .linediv-l {
+           border-bottom: 1px white solid;
+      }
+        .linediv-r {
+           border-top: 1px white solid;
+      }
+     }
+
+      .navbar-inner, .navbar .btn-navbar {
+          background: #a9db80; /* Old browsers */
+background: -moz-linear-gradient(top, #a9db80 0%, #96c56f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9db80), color-stop(100%,#96c56f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #a9db80 0%,#96c56f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #a9db80 0%,#96c56f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #a9db80 0%,#96c56f 100%); /* IE10+ */
+background: linear-gradient(to bottom, #a9db80 0%,#96c56f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9db80', endColorstr='#96c56f',GradientType=0 ); /* IE6-9 */
+      }
+
+
+      .fakenav{
+      background: #006e2e; /* Old browsers */
+background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#006e2e), color-stop(100%,#006e2e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #006e2e 0%,#006e2e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #006e2e 0%,#006e2e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #006e2e 0%,#006e2e 100%); /* IE10+ */
+background: linear-gradient(to bottom, #006e2e 0%,#006e2e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 ); /* IE6-9 */
+margin:0;
+padding:0;      
+}
+
+      .navbar .nav .active > a, .navbar .nav .active > a:hover {
+         background-color: #2a3720;
+      }
+      
+      .navbar .nav > li > a {
+         color: #7fa460;
+         text-decoration: none;
+         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+      }
+
+      .navbar-fixed-top {
+        color: #000000;
+        text-decoration: none;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar .nav > li > a:hover {color:white;}
+
+      .navbar .nav .active > a, .navbar .nav .active > a:hover {color:white;}
+
+      /* All form factors */
+
+      /* Main body and headings */
+        body{
+         font-family: 'Roboto', sans-serif;
+         padding: 40px 0px;
+      }
+      .checker{
+        width: 100%;
+        height: 180px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        background: url("http://i.imgur.com/omxb2jQ.png?1");
+      }
+            
+      .heading {
+         font-family: 'Oxygen', sans-serif;
+         text-align: center;
+         padding-top: 30px;
+         margin: 0px;
+      
+      }
+      .subheading {
+        font-family: 'Just Another Hand', cursive;
+        text-align: center;
+        padding: 0;
+        margin:0;
+      }
+
+      p.lead {
+         padding-top: 0px;
+         font-size: 40px;
+         line-height: 40px;
+         margin:0;
+         padding:0;
+      }
+      p {
+         font-size: 18px;
+         line-height: 24px;
+      }
+
+      /* Video pitch, Action and Rewards */
+        .no-space [class*="span"] {
+        margin-left: 0; 
+      }
+
+        .pitch {
+          padding: 2.5% 0%;
+      }
+        .order {
+          padding: 2% 0%;
+      }
+        .actions {
+          background-color: white;
+          padding: 3% 0%;
+      }
+        .actionsBtn {
+          margin: 5px;
+          
+      }
+        .actionsPrompt {
+         font-family: 'Just Another Hand', cursive;
+         color: black;
+         margin: 5px;
+      }
+        .btnStats {
+          padding: 10px;
+          font-size: 22px;
+          line-height: 200%;
+          border-radius: 8px;
+          margin: 5px;
+
+      }
+
+        .btn-custom {
+          background-color: hsl(41, 85%, 35%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efb73d", endColorstr="#a5750d");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#efb73d), to(#a5750d));
+  background-image: -moz-linear-gradient(top, #efb73d, #a5750d);
+  background-image: -ms-linear-gradient(top, #efb73d, #a5750d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efb73d), color-stop(100%, #a5750d));
+  background-image: -webkit-linear-gradient(top, #efb73d, #a5750d);
+  background-image: -o-linear-gradient(top, #efb73d, #a5750d);
+  background-image: linear-gradient(#efb73d, #a5750d);
+  border-color: #a5750d #a5750d hsl(41, 85%, 29%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.39);
+  -webkit-font-smoothing: antialiased;
+
+      }
+
+        .btn-custom-green {
+  background-color: hsl(110, 56%, 16%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#398f28", endColorstr="#193f11");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#398f28), to(#193f11));
+  background-image: -moz-linear-gradient(top, #398f28, #193f11);
+  background-image: -ms-linear-gradient(top, #398f28, #193f11);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #398f28), color-stop(100%, #193f11));
+  background-image: -webkit-linear-gradient(top, #398f28, #193f11);
+  background-image: -o-linear-gradient(top, #398f28, #193f11);
+  background-image: linear-gradient(#398f28, #193f11);
+  border-color: #193f11 #193f11 hsl(110, 56%, 11%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
+  -webkit-font-smoothing: antialiased;
+}
+
+      .brand
+      {
+        background: url("http://i.imgur.com/Cp3T8fs.png") no-repeat center;
+        height: 20px;
+        width: 90px;
+        margin:0;
+        padding:0;
+      }
+
+        .rewards {
+          background-color: #aaaaaa;
+          padding: 3% 0%; 
+      }
+        .video, .thermometer, .prizes, .order, .social, .statistics {
+          text-align: center;
+      }
+        .statistics h4 {
+          color: white;
+      }
+        .checkboxText {
+         text-align: left;
+      }
+
+        .heading h1 {
+          color: #a9db80;
+          font-size: 66px;
+          margin:0;
+          padding: 0;
+      }
+
+        .modalCreate p {
+          color: #006e2e;
+      }
+        .my-size {
+         width: 150px;
+      }
+
+
+      /* Marketing Copy and Footer */
+      .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+      }
+      .asset {
+        padding: 2.5% 0%;
+        text-align: center;
+      }
+      .footer {
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
+      }
+
+    </style>
+  </head>
+  <body>
+  <div class="navbar navbar-fixed-top">    
+   <div class="navbar-inner">
+    <div class="container-fluid">
+         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#brand"></a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="testabout.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+	    <ul class="nav pull-right">
+        <li><a href="login.html">Login</a></li>
+	      <li class="dropdown">
+		<a class="dropdown-toggle" href="#signIn" data-toggle="dropdown">Sign In</a>
+		<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+		  <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+  <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" placeholder="Username"/>
+  <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" placeholder="Password"/>
+  <span class="help-block"><a href="#" class="text-error"><small>Forgot Password?</small></a></span>
+  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+  <label class="string optional" for="user_remember_me"> Remember me</label>
+
+  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+  <a href="_account.html">Create an Account</a>
+</form>
+                </li>
+                </ul> 
+
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+   
+     <div class="checker"
+      <div class="container">
+      <div class="row-fluid heading">
+	<div class="span12">
+	  <h1>Welcome to <img src="http://i.imgur.com/xIGBU6v.png?1" title="unpind" center center /></h1>
+	  </div>
+	</div>
+	<div class="row-fluid subheading">
+	  <div class="span12">
+	    <p class="lead"> Your place to learn, do and share DIY projects through video chat.</p>
+	    </div>
+      /<div class="span12">
+        //<div id="myPublisherDiv"></div>
+        //<script type="text/javascript">
+          // Initialize API key, session, and token...
+          // Think of a session as a room, and a token as the key to get in to the room
+          // Sessions and tokens are generated on your server and passed down to the client
+          //var apiKey = "34722492";
+          //var sessionId = "2_MX4zNDcyMjQ5Mn4xMjcuMC4wLjF-RnJpIFNlcCAxMyAyMDoxMDo0OSBQRFQgMjAxM34wLjgzNzI0MTM1fg";
+          //var token = "T1==cGFydG5lcl9pZD0zNDcyMjQ5MiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1kZTUyYjAwOWUzMTlhNjkxNzk5OWQ5MWM2N2VhM2U3N2RhNWI2YWM2OnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9Ml9NWDR6TkRjeU1qUTVNbjR4TWpjdU1DNHdMakYtUm5KcElGTmxjQ0F4TXlBeU1Eb3hNRG8wT1NCUVJGUWdNakF4TTM0d0xqZ3pOekkwTVRNMWZnJmNyZWF0ZV90aW1lPTEzNzkxMjgyNDkmbm9uY2U9MC4xMDQ4ODY2MTYwNjQwMjIxNiZleHBpcmVfdGltZT0xMzc5MjE0NjQ0JmNvbm5lY3Rpb25fZGF0YT0=";
+
+          // Initialize session, set up event listeners, and connect
+          //var session = TB.initSession(sessionId);
+          //session.addEventListener('sessionConnected', sessionConnectedHandler);
+         // session.connect(apiKey, token);
+          
+         // function sessionConnectedHandler(event) {
+           // var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+            //session.publish(publisher);
+          //}
+        </script>
+	  </div>
+    </div>
+	</div>
+	</div>
+
+      <div class="container-fluid">
+	<div class="row-fluid pitch no-space">
+	  <div class="span7 offset1">
+	    <div class="video">
+	    <iframe width="640" height="480" src="//www.youtube.com/embed/UdXI7g2hUwo" frameborder="0" allowfullscreen></iframe>
+	    </div>
+
+
+	  </div>
+
+
+	  <div class="span3 actions">
+	    <div class="span12 statistics">
+
+		<div class="span12 actionsBtn">
+
+		  
+		  <!-- Button to trigger Modal -->
+		  <a href="#myModal1" role="button" class="btn btn-primary btn-block btnStats" data-toggle="modal">Create a to-torial</a>
+		  <!--Modal-->
+		  <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-header">
+		      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+		      <h3 id="myModalLabel">It's easy! Simply define, schedule & share.</h3>
+		      </div>
+		    <div class="modal-body modalCreate">
+
+
+		      <!-- Create Form  First -->
+			  <div class="row-fluid no-space">
+				    <div class="span12">
+				      <div class="span12">
+				      <input class="span8" type="text" placeholder="Title">
+				    </div>
+				    <div class="span12">
+				      <input class="span8" type="text" placeholder="Description">
+				    </div>
+				    <div class="span12">
+				      <input class="span8" type="text" placeholder="Required Materials">
+				    </div>
+				  </div>
+				 </div>   
+		        
+		    <!-- Check box -->
+		        <div class="span12">
+		          Pick the categories that best fit or create one:   
+    		         </div>
+		        <div class="span12 checkboxText">
+		          <div class="span4">
+		            <label class="checkbox">
+			     <input type="checkbox" value="">
+			    Food & Drink
+		          </label>
+		          <label class="checkbox">
+			   <input type="checkbox" value="">
+			    DIY
+		           </label>
+		           <label class="checkbox">
+			    <input type="checkbox" value="">
+			    Beauty
+		           </label>
+		         </div>
+		          <div class="span4">
+		           <label class="checkbox">
+			    <input type="checkbox" value="">
+			     Crafts
+		           </label>
+		           <label class="checkbox">
+		            <input type="checkbox" value="">
+			    Women's Fashion
+		           </label>
+		           <label class="checkbox">
+			    <input type="checkbox" value="">
+			     Men's Fashion
+		           </label>
+		         </div>
+		         <div class="span4">
+		           <label class="checkbox">
+			    <input type="checkbox" value="">
+			     Design
+		           </label>
+		          <label class="checkbox">
+			   <input type="checkbox" value="">
+			    Home
+		           </label>
+		          <label class="checkbox">
+			    <input type="checkbox" value="">
+			    Entertaining
+		           </label>
+		        </div>
+		     </div>
+			<!-- Other -->
+		  <div class="span12">
+		    <div class="span4 offset8">
+		      <input class="input-medium" type="text" placeholder="Other1; Other2">
+		    </div>
+		  </div>
+
+		  <!-- Second Date/Time -->
+        
+
+		  <div class="row-fluid">
+		    <div class="span12">
+		    Select a date and time for your to-torial.
+		    </div>
+		    <!-- Year picker -->
+		    <div class="span12">
+		      <div class="span6">
+			<input type="text" class="input-medium yearpicker" placeholder="Pick Year">
+			</div>
+		      <div class="span6">
+			<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  <input class="input-medium" size="16" type="text" value="12-02-2012">
+  <span class="add-on"><i class="icon-th"></i></span>
+</div>
+			</div>
+		      </div>
+
+		    
+		    
+		    <!-- AddThis Button BEGIN -->
+		    <div class="row-fluid">
+		      <div class="span6 offset4 actionsBtn">
+		    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+		      <a class="addthis_button_preferred_1"></a>
+		      <a class="addthis_button_preferred_2"></a>
+		      <a class="addthis_button_preferred_3"></a>
+		      <a class="addthis_button_preferred_4"></a>
+		      <a class="addthis_button_compact"></a>
+		      <a class="addthis_counter addthis_bubble_style"></a>
+		    </div>
+		    </div>
+		      </div>
+			    
+		    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5200a667119977b7"></script>
+		    <!-- AddThis Button END -->
+
+		    </div>
+
+
+		    <div class="modal-footer">
+		      <button class="btn" data-dismiss="modal" aria-hidden="true">Save</button>
+		      <button class="btn btn-primary">Post</button>
+		      </div>
+		    </div>
+		 </div>
+		  </div>
+		 <div class="span12 actionsBtn">
+		    <!-- Button to trigger modal -->
+		    <a href="#myModal2" role="button" class="btn btn-primary btn-block btnStats" data-toggle="modal">Request a to-torial</a>
+
+		    <!-- Modal -->
+		    <div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+		      <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+			<h3 id="myModalLabel2">Don't see what you're looking for?  Tell us!</h3>
+			</div>
+		      <div class="modal-body modalCreate">
+			<div class="span12"> 
+			<textarea rows=3 type="text" class="span8" placeholder="Describe it for us..."></textarea>
+			</div>
+			<div class="span12">
+			 <input class="span8" type="text" placeholder="Paste a link to the project">
+			 </div>
+		      </div>
+		      <div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			<button class="btn btn-primary">Send Request</button>
+			</div>
+		      </div>
+
+                    </div>
+		 <div class="span12 actionsBtn actionsPrompt">
+		   <p class="lead">Share it!</p>
+		   </div>
+		  <div class="span12 social">
+
+		    <!-- AddThis Button BEGIN -->
+		    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+		      <a class="addthis_button_preferred_1"></a>
+		      <a class="addthis_button_preferred_2"></a>
+		      <a class="addthis_button_preferred_3"></a>
+		      <a class="addthis_button_preferred_4"></a>
+		      <a class="addthis_button_compact"></a>
+		      <a class="addthis_counter addthis_bubble_style"></a>
+		    </div>
+		    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+		    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5200a667119977b7"></script>
+		    <!-- AddThis Button END -->
+
+
+              </div>
+		</div>
+
+
+	  </div>
+
+	         </div>
+	      </div>
+	   </div> 
+       <hr>
+
+
+       <div class="container-fluid">
+	 <div class="span6">
+	    <div class="asset">
+            <img class="img-polaroid" src="http://i.imgur.com/RpLolbg.png?1">
+            </div>
+
+            <div class="asset">
+              <img class="img-polaroid" src="http://i.imgur.com/Ow6e4ac.png">
+              </div> -
+	   </div>
+	 <div class="span6">
+	  <div class="asset">
+            <img class="img-polaroid" src="http://i.imgur.com/gEKKuFr.png">
+            </div>
+
+            <div class="asset">
+              <img class="img-polaroid" src="http://i.imgur.com/KJ2WHR4.png">
+              </div>   
+	 </div>
+
+	 </div>
+
+
+	<div class="row-fluid faq">
+	  <div class="span10 offset1">
+	    <h3>FAQ</h3>
+	    <div class="accordion" id="accordion2">
+	      <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseOne">
+		  When will the site launch?
+		  </a>
+		</div>
+	      <div id="collapseOne" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  We are in the process of building the site and network.  With your feedback and support we will launch shortly.  
+		  </div>
+		</div>
+	      </div>
+	      <div class="accordion-group">
+		<div class="accordion-heading">
+		  <a class="accordion-toggle" data-togggle="collapse"
+		     data-parent="#accordion2" href="#collapseOne">
+		    Want to get in touch?
+		    </a>
+		  </div>
+	      <div id="collapseOne" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  We'd love to hear from you!  Email us: kim at unpind.com.  
+	    </div>
+	</div>
+	</div>
+	</div>
+	</div>
+  
+	  </div>
+	</div>
+	<div class="row-fluid footer">
+	  <div class="span12">
+	    <p> This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+		By-SA 3.0
+		</a>, without all the cruft that would otherwise be put at the bottom of the page.</p>
+	    </div>
+	    </div>
+	  </div>
+
+
+      </body>
+  </html>
+	     
+	     
