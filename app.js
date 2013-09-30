@@ -8,6 +8,15 @@
 var express = require('express');
 var http = require('http');
 var app = express();
+var fs = require('fs');
+
+
+var htmlfile = "test2.html";
+app.get('/', function(request, response) {
+ var html = fs.readFileSync(htmlfile).toString();
+ response.send(html);
+});
+
 
 app.configure(function(){
 	app.set('port', 8080);
@@ -28,7 +37,9 @@ app.configure('development', function(){
 	app.use(express.errorHandler());
 });
 
-require('./app/server/router')(app);
+
+app.get('/login.html', function(require('./app/server/router')(app) );
+
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log("Express server listening on port " + app.get('port'));
